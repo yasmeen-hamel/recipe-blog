@@ -4,7 +4,7 @@
 ##Content
 
 h1 - Easy Gourmet Instant Ramen Noodle Bowl
-  nav
+
   h2 - Story
       
   h2 - Ingredients
