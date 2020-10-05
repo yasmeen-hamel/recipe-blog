@@ -2,7 +2,7 @@
 
 
 :root{
-  --col-bg:#f1f1ef;
+  --col-bg:#dfdfcf;
   --col-bg-fore: #c19434;
   --col-bg-mid: #34421e;
   --col-bg-light: #438b5e;
@@ -12,9 +12,11 @@
 
 body{
   background-color: var(--col-bg);
-  color: var(--col-bg-mid);
-  font: normal normal 1em/1.5 var(--sans);
+  font:var(--sans);
 
+}
+header{
+  list-style-type: none;
 }
 
 h1, h2, h3, h4{
@@ -34,7 +36,8 @@ P{
 }
 
 img{
-  max-width: 70%;
+  max-width: 60%;
+  position: relative;
 }
 
 strong{
@@ -48,8 +51,24 @@ a{
 }
 
 footer{
-  color: var(--col-bg-mid);
+  background-color: var(--col-bg-mid);
+  
 }
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 2.4fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "menu menu menu"
+    "sidebar copy copy"
+    "legal legal legal";
+}
+.menu { grid-area: menu; }
+.sidebar { grid-area: sidebar; }
+.legal { grid-area: legal; }
+.copy { grid-area: copy; }
 
 
 .subhead{
@@ -74,10 +93,6 @@ footer{
   
 }
 
-.grid{
-  list-style: none;
-}
-
 .ingredients{
   list-style: none;
 }
@@ -94,11 +109,6 @@ footer{
   list-style: none;
 }
  
-.legal{
-  display: inline-block;
-  line-height: 2em;
-
-}
 
 .social{
   list-style-type: none;
