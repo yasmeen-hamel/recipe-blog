@@ -37,6 +37,7 @@ P{
 
 img{
   max-width: 80%;
+  
 
 }
 
@@ -55,6 +56,10 @@ footer{
   
 }
 
+ul{
+  list-style-type: none;
+
+}
 .grid-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -69,12 +74,18 @@ footer{
 .menu { 
   grid-area: menu;
   font-family: var(--sans);
-  list-style-type: none; 
+  list-style-type: none;
+  background-color: var(--col-bg-fore-mid); 
+  width: 100%;
+  margin: 20px auto;
 }
 
 .sidebar { 
   grid-area: sidebar;
   font-family: var(--sans);
+  background-color: var(--col-bg-fore);
+  border-radius: 3px;
+  
 }
 
 .legal { 
@@ -85,7 +96,7 @@ footer{
 
 .copy { 
   grid-area: copy;
-  font-family: var(--sans); 
+  font-family: var(--sans);
 }
 
 .subhead{
@@ -95,7 +106,7 @@ footer{
 }
 
 .logo{
-  max-width:120px;
+  max-width:110px;
   position: center;
 }  
 
@@ -126,4 +137,35 @@ footer{
   max-width: 20%;
   width: 20px;
   height: 20px;
+}
+.ctgory{
+  background-color: var(--col-bg-fore);
+  max-width: 9em;
+  color: var(--col-bg);
+}
+
+@media (max-width: 767px){
+  .menu .copy { 
+   width: 40%;}
+
+  
+@media (max-width: 767px){
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr;
+    grid-template-rows: 0.2fr 1.4fr 1.7fr 0.4fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "menu menu menu"
+      "copy copy copy"
+      "side-bar side-bar side-bar"
+      "legal legal legal";
+  }
+  .menu { grid-area: menu; }
+  .copy { grid-area: copy; }
+  .side-bar { grid-area: side-bar; }
+  .legal { grid-area: legal;
+            background-color: var(--col-bg-mid); 
+  }
+
 }
