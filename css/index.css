@@ -14,9 +14,7 @@ body{
   background-color: var(--col-bg);
   font:var(--sans);
 
-}
-header{
-  list-style-type: none;
+
 }
 
 h1, h2, h3, h4{
@@ -24,6 +22,7 @@ h1, h2, h3, h4{
   font-weight: 700;
   line-height: 1;
   margin: 1em 0;
+  
 }
 
 h1 { font-size: 2em; color: var(--col-bg-mid);}
@@ -33,11 +32,12 @@ h4 { font-size: 1.25em; color: var(--col-bg-mid);}
 
 P{
   margin: 1em 0;
+  font-family: var(--sans);
 }
 
 img{
-  max-width: 60%;
-  position: relative;
+  max-width: 80%;
+
 }
 
 strong{
@@ -65,11 +65,28 @@ footer{
     "sidebar copy copy"
     "legal legal legal";
 }
-.menu { grid-area: menu; }
-.sidebar { grid-area: sidebar; }
-.legal { grid-area: legal; }
-.copy { grid-area: copy; }
 
+.menu { 
+  grid-area: menu;
+  font-family: var(--sans);
+  list-style-type: none; 
+}
+
+.sidebar { 
+  grid-area: sidebar;
+  font-family: var(--sans);
+}
+
+.legal { 
+  grid-area: legal;
+  font-family: var(--sans);
+  
+ }
+
+.copy { 
+  grid-area: copy;
+  font-family: var(--sans); 
+}
 
 .subhead{
   display: inline;
@@ -81,17 +98,6 @@ footer{
   max-width:120px;
   position: center;
 }  
-
-.menu ul{
-  display: none;
-  font-weight: 600;
-  font-size: 1.10em;
-  margin: 0 auto;
-  text-align: center;
-  list-style: none;
-  
-  
-}
 
 .ingredients{
   list-style: none;
@@ -106,10 +112,18 @@ footer{
 }
 
 .instructions{
-  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
 }
  
+.rights{
+  font-size: 1em;
+  color: var(--col-bg);
+}
 
 .social{
   list-style-type: none;
+  max-width: 20%;
+  width: 20px;
+  height: 20px;
 }
